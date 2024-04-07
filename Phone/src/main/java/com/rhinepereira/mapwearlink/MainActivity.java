@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends AppCompatActivity {
-    public static final String TAG = "tagula";
+    public static final String TAG = "taglorant";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
                                     Log.e("from android", "Failed to send message: " + exception);
                                     runOnUiThread(new Runnable() {
                                         public void run() {
-                                            Toast.makeText(MainActivity.this, "Toast Failed", Toast.LENGTH_SHORT).show();
                                         }
                                     });
                                 }
@@ -71,14 +70,12 @@ public class MainActivity extends AppCompatActivity {
                     Log.e("from android", "Failed to send message: " + exception);
                     runOnUiThread(new Runnable() {
                         public void run() {
-                            Toast.makeText(MainActivity.this, "Toast 메시지 내용", Toast.LENGTH_SHORT).show();
                         }
                     });
                 } catch (InterruptedException exception) {
                     Log.e("from android", "Failed to send message: " + exception);
                     runOnUiThread(new Runnable() {
                         public void run() {
-                            Toast.makeText(MainActivity.this, "Toast 메시지 내용", Toast.LENGTH_SHORT).show();
                         }
                     });
                 }
